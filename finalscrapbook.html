@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/mj/haha.jpg" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margarette Jem S. Mello | Scrapbook</title>
+    <style>
+        
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --primary-blue: #005b94;
+            --primary-yellow: #ffd500;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .profile-image {
+        text-align: center;
+        margin-bottom: 20px;
+}
+/* profile pic sa abt me */
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-yellow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #dac15f 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.hero-content {
+    flex: 1;
+    color: var(--text-light);
+    z-index: 2;
+}
+
+
+/* HERO COVER IMAGE */
+.hero-cover-image {
+    position: relative;
+    z-index: 3;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border: 6px solid var(--primary-blue);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    background-color: var(--primary-blue);
+    filter: url('#blob');
+    animation: blobAnimation 8s ease-in-out infinite;
+}
+
+@keyframes blobAnimation {
+    0%, 100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+    25% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+    50% { border-radius: 50% 60% 50% 40%/40% 30% 60% 50%; }
+    75% { border-radius: 40% 60% 30% 70%/60% 70% 40% 30%; }
+}
+
+.hero-cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ @media (max-width: 992px){
+    .hero-cover-image{
+        width: 300px;
+        height: 300px;
+    }
+ }
+@media (max-width: 768px) {
+    
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-content{
+        text-align: center;
+    }
+    .hero-cover-image{
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .hero-cover-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 0;
+    color: var(--text-light);
+    width: 100%; 
+    height: 100vh;
+}
+
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+   
+}
+
+.journey-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-yellow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Journey Container */
+.journey-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-blue);
+    opacity: 0.1;
+    border-radius: 0 0 0 100%;
+}
+
+.journey-container h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+}
+
+.journey-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-yellow);
+}
+
+.journey-container p {
+    line-height: 1.7;
+}
+
+/* responsive style for JOURNEY-CONTAINER */
+@media (max-width: 768px) {
+    .journey-container {
+        padding: 20px;
+    }
+}
+/* Why Container */
+.why-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-blue);
+    opacity: 0.1;
+    border-radius: 0 0 0 100%;
+}
+
+.why-container h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+}
+
+.why-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-yellow);
+}
+
+.why-container p {
+    line-height: 1.7;
+}
+
+/* responsive style for WHY-CONTAINER */
+@media (max-width: 768px) {
+    .why-container {
+        padding: 20px;
+    }
+}
+        body {
+            background-color: #f5f5f5;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+/* How Container */
+.how-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.how-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-blue);
+    opacity: 0.1;
+    border-radius: 0 0 0 100%;
+}
+
+.how-container h3 {
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+}
+
+.how-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-yellow);
+}
+
+.how-container p {
+    line-height: 1.7;
+}
+
+/* responsive style for HOW-CONTAINER */
+@media (max-width: 768px) {
+    .how-container {
+        padding: 20px;
+    }
+}
+
+.conclusion-container{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-blue);
+    position: relative;
+    overflow: hidden;
+
+}
+.conclusion-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-blue);
+    opacity: 0.1;
+    border-radius: 0 0 0 100%;
+}
+
+.conclusion-container h3 {
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+}
+
+.conclusion-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-yellow);
+}
+
+.conclusion-container p {
+    line-height: 1.7;
+}
+
+/* responsive style for CONCLUSION-CONTAINER */
+@media (max-width: 768px) {
+    .conclusion-container {
+        padding: 20px;
+    }
+}
+
+
+
+
+/* hover effects in each container (journey, about, how and why)*/
+.why-container:hover,
+.how-container:hover,
+.journey-container:hover,
+.about-text:hover,
+.conclusion-container:hover{
+    transform: translateY(-15px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    transition: all 0.5s ease; 
+    }
+
+        body {
+            background-color: #f5f5f5;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       
+        header {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: var(--primary-yellow);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--primary-yellow);
+            color: var(--primary-blue);
+        }
+        
+       
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 40%, var(--primary-yellow) 83%);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px 20px; 
+            color: var(--text-light);
+            width: 100%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        
+        /* Main Content */
+        main {
+            padding: 50px 0;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--primary-yellow);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .about-text {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+            border-left: 5px solid var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-blue);
+            opacity: 0.1;
+            border-radius: 0 0 0 100%;
+        }
+        .about-text h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 22px;
+            position: relative;
+            display: inline-block;
+        }
+        .about-text h3::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 60%;
+        height: 3px;
+        background-color: var(--primary-yellow);
+    }
+        .about-text p {
+            line-height: 1.7;
+        }
+        
+        /* Journal Entries */
+        .journal-entries {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .entry-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .entry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .entry-header {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .entry-content {
+            padding: 20px;
+        }
+        
+        .entry-content p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-yellow);
+            color: var(--primary-blue);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+        
+        .modal-title {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-yellow);
+        }
+        
+        /* Conclusion Section */
+        .conclusion {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .conclusion-image {
+            text-align: center; 
+            margin: 20px 0;     
+            }
+        .conclusion-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            aspect-ratio: 12 / 5; 
+            border-radius: 5px;
+            object-fit: cover;
+            border: 5px solid var(--primary-blue);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .conclusion-image img {
+                max-width: 90%;
+                border-width: 4px;
+            }
+            }
+
+
+            @media (max-width: 480px) {
+            .conclusion-image img {
+                max-width: 100%;
+                border-width: 3px;
+                border-radius: 3px;
+            }
+            }
+        
+        
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-blue);
+                padding: 20px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero-content {
+                width: 100%;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">M<span>J</span></div>
+            <button class="nav-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#entries">Journal</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <svg width="0" height="0" style="position: absolute;">
+        <filter id="blob">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
+          <feComposite in="SourceGraphic" in2="blob" operator="atop"></feComposite>
+        </filter>
+      </svg>
+
+    <section class="hero" id="home">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+            <h1>hi, I am MJ!</h1>
+            <h2>Understanding the Self</h2>
+            <p>Scrapbook</p>
+        </div>
+
+        <!--  hero image -->
+        <div class="hero-cover-image">
+            <img src="./mj/hero.jpg" alt="Profile Image">
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+
+                
+                <div class="about-text">
+                    <div class="profile-image">
+                    <img src="./mj/about.jpg" alt="Who I Am">
+                </div>
+
+                    <!-- WHO I AM -->
+                    <h3>Who I Am</h3>
+                    <p>My name is <b>Margarette Jem S. Mello,</b> a quiet but creative person from <b>BSIT 1-11</b>. I'm currently <b>19 years old.</b>
+                    I have a background in <b>Video Editing</b> and I am also a <b>gamer!</b> Music plays a very huge part in my life, I cannot literally can't live without Spotify. 
+                    In my free time, I <b>enjoy playing online games</b> with friends, <b>studying coding</b> and <b>edit videos.</b> 
+                    My biggest interest? <b>Games</b>, of course 😜. One unique trait? I can <b>multitask like a pro</b>—I can play games and cram deadlines at the same time. (Just kidding po)</p>
+                </div>
+
+                
+                     <!-- MY JOURNEY -->
+                <div class="journey-container">
+                    <div class="profile-image">
+                        <img src="./mj/how.jpg" alt="My Journey">
+                    </div>
+                    <h3>My Journey So Far</h3>
+                    <p>In my 1 years of existence, <b>I went through countless challenges—more than you could count on your fingers...</b> and with that 
+                        only one person knows it all and I am thankful to her. I am glad that I'm still holding on even though I faced those challenges.
+                        With those life experiences, I become who I am today, I got my achievements that shaped who I am today.
+                    </p>
+                </div>
+
+                     <!-- HOW I SEE MYSELF -->
+                <div class="how-container"> 
+                    <div class="profile-image">
+                        <img src="/mj/haha.jpg" alt="How I See Myself">
+                    </div>
+                    <h3>How I See Myself</h3>
+                    <p>It's simple a <b>person who does not care</b> about what is happening in their surroundings.
+                        Having a strength like that is cool, they say, but having those strength feels like
+                        you do not have feelings and emotions and it sucks because you cannot figure out your own self.
+                        But then, I use this as a aspiration and motivation that turns to <b><i>"continue what you are doing because they do not care about you."</b></i>
+                    </p>
+                </div>
+
+                    <!-- WHY I CHOSE -->
+                <div class="why-container">
+                    <div class="profile-image">
+                        <img src="./mj/why.jpg" alt="How I See Myself">
+                    </div>
+                    <h3>Why I Chose This Platform</h3>
+                    <p>I chose this platform because I want to start in a scrap and then little by little study it so I can have a little advance
+                        study about <b>Web Development</b> and this platform makes it easy for me since <b>I am a Video Editor and I am more on Designing Videos.</b>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="entries">
+            <h2 class="section-title">Journal</h2>
+            <div class="journal-entries">
+
+                <!-- Physical Self  -->
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <h3>Physical Self</h3>
+                    </div>
+                    <div class="entry-content">
+                        <p>Me and my physical self? It's been a rollercoaster—plot twists, glow-ups, and all..</p>
+                        <a href="#" class="btn read-more" data-entry="physical">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Social Self  -->
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <h3>Social Self</h3>
+                    </div>
+                    <div class="entry-content">
+                        <p>Stop minimizing yourself to fit into spaces you've outgrown...</p>
+                        <a href="#" class="btn read-more" data-entry="social">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Spiritual Self  -->
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <h3>Spiritual Self</h3>
+                    </div>
+                    <div class="entry-content">
+                        <p>Diving deep into my values and beliefs has sparked a clear vision of my true purpose in life...</p>
+                        <a href="#" class="btn read-more" data-entry="spiritual">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Digital Self  -->
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <h3>Digital Self</h3>
+                    </div>
+                    <div class="entry-content">
+                        <p>Tell me who your friends are, and I'll tell you who you are...</p>
+                        <a href="#" class="btn read-more" data-entry="digital">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Future Self  -->
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <h3>Future Self</h3>
+                    </div>
+                    <div class="entry-content">
+                        <p>When I picture my future, I see myself thriving in all the areas that matter most...</p>
+                        <a href="#" class="btn read-more" data-entry="future">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <div class="conclusion-container">
+                <div class="conclusion-image">
+                    <img src="./mj/conclu.jpg" alt="Conclusion">
+                </div>
+            <h2 class="section-title">Conclusion</h2>
+            <classbs="conclusion">
+                <p>TMy journey finally aims to bring me closer to my true self.  
+                    Every encounter has taught me something new, whether it's <b>how to respect my principles, set boundaries in relationships, learn to accept my body, or discover freedom in the digital world.</b>  
+                    I've come to the realization that I don't have to adapt or seek favor from others.  
+                    I choose to live a confident, balanced, and self-respecting life because I have the power to determine my future.</p>  
+                    <p><br><i>This is my journey—to develop, to be free, and to always remain loyal to who I am.</p></i></br>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Scrapbook UTS | Created by MJ Mello</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/fromemjae?igsh=OGc5dWk3aDBmbWlh&utm_source=qr"target=_blank>Instagram</a>
+                <a href="https://www.facebook.com/dimpleskie08"target=_blank>Facebook</a>
+                <a href="https://www.linkedin.com/in/fromemjae/"target=_blank>LinkedIn</a>
+                <a href="https://drive.google.com/drive/u/3/folders/1CD-cXTDpAfR3_ceaoboOL91DSL4jhK52"target=_blank>Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Journal Entries -->
+    <div class="modal" id="entry-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title" id="modal-title">Journal Entry</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+        
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Update active link
+                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close mobile menu
+                nav.classList.remove('active');
+            });
+        });
+        
+        // Modal Functionality
+        const modal = document.getElementById('entry-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const closeModal = document.querySelector('.close-modal');
+        
+        // Journal entries content
+        const journalEntries = {
+            physical: {
+                title: "Physical Self",
+                content: `
+                    <p>My journey with my body has been one of acceptance and growth. 
+                        I've learned to value it not for how it looks, but for what it allows me to do. 
+                        Physical wellness now means more than fitness—it's mental clarity, emotional balance, and self-respect. 
+                        I’ve let go of unrealistic standards and embraced a kinder, more holistic view. Moving forward, 
+                        I’m committed to caring for my body with intention, honoring both its strength and its limits.</p>
+                `
+            },
+            social: {
+                title: "Social Self",
+                content: `
+                    <p>Lately, I’ve been thinking a lot about my relationships and the roles I play in people’s lives. 
+                        It’s crazy how much we try to be everything for everyone—just to be seen, accepted, or loved. 
+                        But here’s what I’ve realized: <b><i>I don’t need to force anyone to understand me.</i></b> If they truly care, they’ll try.
+                        I’ve spent too much time shaping myself to fit others’ expectations, thinking it would make things better. 
+                        But it never did. I shouldn’t have to change who I am just to belong. Being true to myself feels lighter, freer.
+                        Some people won’t get it—and that’s okay. I don’t need to stay where I’m not valued. 
+                        Real peace comes when we stop chasing approval and start honoring who we really am.</p>
+                        <br><b><p>So always treat yourself first before anyone else</b> 😉</p></br>
+                `
+            },
+            spiritual: {
+                title: "Spiritual Self",
+                content: `
+                    <p>One thing I’ve come to value is <b>respecting others' beliefs and opinions without letting go of my own.</b> 
+                        I’ve learned that I don’t need to agree with everyone, and I don’t have to change what I believe in to keep the peace.
+                        A big part of my growth has come through tough times—when I feel lost or overwhelmed, my go-to <b><i>coping mechanism</b></i> is <b>stepping back and not talking to anyone for a while.</b>
+                        It’s not about shutting people out—it’s about giving myself the space to calm down and breathe.</p>
+                `
+            },
+            digital: {
+                title: "Digital Self",
+                content: `
+                    <p>I feel particularly free in the digital world.  <b>I can express myself without being limited by the real world behind an alias.</b>
+                         I can escape from the stresses of everyday life and engage in enjoyable activities because of my privacy. The internet provides a safe haven where I may be who I am without fear of criticism.  
+                         It's a place where I can pursue interests, meet people who share my interests, and feel like I belong. 
+                         By accepting my digital identity, I hope to use it as a tool for <b>self-expression, growth, and connectivity while navigating this environment with awareness.</b></p>
+                `
+            },
+            future: {
+                title: "Future Self",
+                content: `
+                    <p>My ideal future self would be <b>financially independent,</b> able to purchase everything I want, travel without limitations on money, eat any food I want, and hang out anytime I want.  
+                        However, I also keep a balanced approach to budgeting, making sure that having money doesn't mean sacrificing accountability. Since my <b>pleasure and independence come from my own decisions,</b> 
+                        I see myself leading a genuine life free from the boundaries of other people's perceptions.  I am the designer of my life, putting my health and happiness first. This future is about living on my terms and accepting the freedom to be who I am without settling; 
+                        it's not simply about achieving money success.</p>
+                `
+            }
+        };
+        
+        // Open modal with journal entry content
+        document.querySelectorAll('.read-more').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const entryType = this.getAttribute('data-entry');
+                const entry = journalEntries[entryType];
+                
+                modalTitle.textContent = entry.title;
+                modalBody.innerHTML = entry.content;
+                modal.style.display = 'block';
+                
+                // Prevent scrolling on the body
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Active navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            let scrollPosition = window.scrollY;
+            
+            // Get all sections
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('nav a').forEach(a => {
+                        a.classList.remove('active');
+                        if (a.getAttribute('href') === `#${sectionId}`) {
+                            a.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
